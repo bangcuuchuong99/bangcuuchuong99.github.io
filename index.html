@@ -12,10 +12,10 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background-color: #fffaf0;
-      color: #222;
-      line-height: 1.6;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #fff9f2;
+      color: #2c2c2c;
+      line-height: 1.7;
     }
 
     a {
@@ -23,19 +23,20 @@
       text-decoration: none;
     }
 
-    /* Thanh menu */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
+      background: linear-gradient(90deg, #ffb74d, #ffcc80);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       z-index: 10;
-      background-color: #fff7e6;
-      border-bottom: 1px solid #f0d9b5;
     }
 
     .nav {
       max-width: 960px;
       margin: 0 auto;
-      padding: 12px 16px;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -43,71 +44,76 @@
 
     .nav-brand {
       font-weight: 700;
-      color: #ff5722;
       letter-spacing: 0.5px;
+      color: #fff;
+      font-size: 18px;
     }
 
     .nav-menu a {
-      margin-left: 16px;
-      font-size: 14px;
+      margin-left: 18px;
       font-weight: 500;
-      opacity: 0.8;
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.9;
     }
 
     .nav-menu a:hover {
       opacity: 1;
-      color: #ff5722;
+      text-decoration: underline;
     }
 
-    /* Khối chung */
+    /* SECTION BASE */
     .section {
       max-width: 960px;
       margin: 0 auto;
-      padding: 40px 16px;
+      padding: 50px 18px;
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
       text-align: center;
       padding-top: 60px;
-      padding-bottom: 40px;
     }
 
     .hero-title {
-      font-size: 32px;
-      color: #ff5722;
-      margin-bottom: 12px;
+      font-size: 34px;
+      color: #e65100;
+      margin-bottom: 14px;
+      font-weight: 700;
     }
 
     .hero-subtitle {
-      font-size: 16px;
-      max-width: 680px;
+      font-size: 17px;
+      max-width: 700px;
       margin: 0 auto 20px;
+      color: #333;
     }
 
     .hero-tag {
       display: inline-block;
       margin: 4px 6px;
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 999px;
-      background-color: #ffe0b2;
+      background-color: #ffecb3;
       font-size: 12px;
-      color: #663300;
+      color: #8b4513;
+      font-weight: 500;
     }
 
-    /* Giới thiệu */
+    /* CARD */
     .card {
-      background-color: #fffdf7;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      margin-top: 16px;
+      background-color: #fffdf9;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 18px;
     }
 
     .section-title {
       font-size: 22px;
-      margin-bottom: 8px;
-      color: #e64a19;
+      color: #e65100;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
     .muted {
@@ -116,19 +122,24 @@
       margin-bottom: 8px;
     }
 
-    /* Tác phẩm */
+    /* WORK GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
       margin-top: 16px;
     }
 
     .work-item {
-      background-color: #fffdf7;
-      border-radius: 10px;
-      padding: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      background-color: #fffefc;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+
+    .work-item:hover {
+      transform: translateY(-4px);
     }
 
     .work-item h3 {
@@ -146,29 +157,30 @@
       display: inline-block;
       margin-top: 8px;
       font-size: 11px;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 999px;
-      background-color: #ffe0b2;
+      background-color: #ffecb3;
       color: #6d3c17;
     }
 
-    /* Liên hệ */
+    /* CONTACT */
     .contact-list p {
       margin-bottom: 4px;
       font-size: 14px;
     }
 
     .contact-list a {
-      color: #ff5722;
+      color: #e65100;
+      font-weight: 500;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 24px 16px 32px;
       font-size: 13px;
-      background-color: #fff7e6;
-      color: #555;
+      background-color: #ffe0b2;
+      color: #444;
       margin-top: 20px;
     }
 
@@ -200,17 +212,17 @@
 
   <!-- HERO -->
   <section id="home" class="section hero">
-    <h1 class="hero-title">Thế giới tiểu thuyết của Bảng Cửu Chương</h1>
+    <h1 class="hero-title">Thế giới của Bảng Cửu Chương</h1>
     <p class="hero-subtitle">
-      Bút danh <strong>Bảng Cửu Chương</strong> – điểm giao nhau giữa tiểu thuyết mạng Trung Quốc
-      và những ám ảnh cá nhân về toán học, kinh tế, chính trị, lịch sử và triết học.
-      Đây là nơi tôi thử nghiệm những thế giới mới, nơi tu luyện không chỉ là linh lực
-      mà còn là tư duy.
+      Bút danh <strong>Bảng Cửu Chương</strong> – nơi tôi khởi đầu hành trình viết tiểu thuyết
+      với cảm hứng từ toán học, kinh tế, chính trị, lịch sử và triết học.
+      Một thế giới nơi chữ nghĩa cũng có thể là phép tính.
     </p>
     <div>
-      <span class="hero-tag">Tiểu thuyết mạng</span>
+      <span class="hero-tag">Tiểu thuyết</span>
       <span class="hero-tag">Toán học</span>
-      <span class="hero-tag">Kinh tế & chính trị</span>
+      <span class="hero-tag">Kinh tế</span>
+      <span class="hero-tag">Chính trị</span>
       <span class="hero-tag">Lịch sử</span>
       <span class="hero-tag">Triết học</span>
     </div>
@@ -219,64 +231,51 @@
   <!-- GIỚI THIỆU -->
   <section id="about" class="section">
     <h2 class="section-title">Giới thiệu</h2>
-    <p class="muted">Một độc giả lớn lên cùng tiểu thuyết web Trung Quốc và đang bắt đầu viết những câu chuyện của riêng mình.</p>
+    <p class="muted">Bảng Cửu Chương – bút danh gắn với đam mê viết lách và tư duy sáng tạo.</p>
     <div class="card">
       <p>
-        <strong>Bảng Cửu Chương</strong> là bút danh tôi chọn để ghi lại hành trình viết lách của mình.
-        Tôi từng “cày” những bộ như <em>Đấu La Đại Lục</em> của Đường Gia Tam Thiếu,
-        <em>Đấu Phá Thương Khung</em> của Thiên Tằm Thổ Đậu,
-        <em>Thế Giới Hoàn Mỹ</em>, <em>Tiên Nghịch</em>, <em>Phàm Nhân Tu Tiên</em>… –
-        và bây giờ tôi muốn dùng năng lượng đó để tạo ra thế giới riêng của mình.
+        Tôi sáng tác dưới tên <strong>Bảng Cửu Chương</strong> như một cách kết nối giữa
+        lý trí và tưởng tượng. Ở đây, tôi viết về thế giới mà tri thức và cảm xúc cùng tồn tại:
+        nơi toán học không chỉ là con số, mà là nhịp đập của tư duy; nơi kinh tế, lịch sử và triết học
+        hòa vào dòng chảy của những câu chuyện.
       </p>
       <p style="margin-top:10px;">
-        Thay vì chỉ có tu luyện, cấp bậc và chiến lực, các nhân vật của tôi còn bị quăng
-        vào những câu hỏi về:
-      </p>
-      <ul style="margin-left:18px; margin-top:6px; font-size:14px;">
-        <li>Toán học: logic, xác suất, những “bảng cửu chương” bên trong thế giới tu luyện.</li>
-        <li>Kinh tế & chính trị: quyền lực, tài nguyên, thị trường, chiến tranh và đế quốc.</li>
-        <li>Lịch sử & triết học: ký ức, hệ tư tưởng, những câu hỏi “vì sao thế giới lại như thế này?”.</li>
-      </ul>
-      <p style="margin-top:10px;">
-        Trang này là nơi tôi đăng tải những chương truyện mới, ghi chú ý tưởng,
-        và đôi khi là vài dòng nhật ký về quá trình viết.
+        Trang web này là không gian cá nhân để chia sẻ các ý tưởng, tiểu thuyết và dự án đang được ấp ủ.
       </p>
     </div>
   </section>
 
-  <!-- TÁC PHẨM / TIỂU THUYẾT -->
+  <!-- TÁC PHẨM -->
   <section id="works" class="section">
-    <h2 class="section-title">Tiểu thuyết & dự án đang ấp ủ</h2>
-    <p class="muted">Danh sách dưới đây sẽ được cập nhật dần khi tôi bắt đầu xuất bản chương mới.</p>
+    <h2 class="section-title">Tiểu thuyết & Dự án</h2>
+    <p class="muted">Một vài dự án tôi đang xây dựng – nơi câu chuyện gặp gỡ tri thức.</p>
 
     <div class="grid">
       <div class="work-item">
-        <h3>Dự án 01 – Thành Trấn Trụ Cột</h3>
+        <h3>Thành Trấn Trụ Cột</h3>
         <p>
-          Một thị trấn nhỏ nằm trên giao lộ của nhiều thế giới: nơi bảng cửu chương
-          không chỉ là công cụ học thuộc mà còn là chìa khóa mở ra cấu trúc ẩn của vũ trụ.
-          Nhân vật chính là một học sinh “dở toán” nhưng lại nhìn thấy được quy luật đằng sau mọi thứ.
+          Một thị trấn nhỏ nằm trên giao điểm của nhiều thế giới – nơi bảng cửu chương trở thành
+          bí ẩn chi phối trật tự vũ trụ. Câu chuyện về tri thức, ký ức và sự tái sinh.
         </p>
-        <span class="work-tag">Phiêu lưu · Toán học</span>
+        <span class="work-tag">Giả tưởng · Triết học</span>
       </div>
 
       <div class="work-item">
-        <h3>Dự án 02 – Kinh Tế Tu Chân</h3>
+        <h3>Kinh Tế Tu Chân</h3>
         <p>
-          Nếu tài nguyên tu luyện bị thị trường hóa, nếu các tông môn vận hành như tập đoàn,
-          nếu linh thạch có lạm phát thì chuyện gì sẽ xảy ra?
-          Một câu chuyện tu tiên nhìn thế giới bằng lăng kính kinh tế – chính trị.
+          Nếu tu luyện cũng có giá, nếu linh thạch bị lạm phát và các tông môn trở thành tập đoàn?
+          Một thế giới nơi quyền lực và niềm tin vận hành như nền kinh tế khổng lồ.
         </p>
         <span class="work-tag">Tu tiên · Kinh tế & chính trị</span>
       </div>
 
       <div class="work-item">
-        <h3>Dự án 03 – Những Kẻ Học Lịch Sử</h3>
+        <h3>Những Kẻ Học Lịch Sử</h3>
         <p>
-          Ở một đế quốc giả tưởng, những người ghi chép lịch sử có khả năng thay đổi dòng thời gian
-          bằng chính cách họ viết lại quá khứ. Nhân vật chính phải chọn giữa sự thật và sự sống còn.
+          Một đế quốc tồn tại bằng cách viết lại quá khứ. Những người học lịch sử có thể
+          thay đổi thực tại bằng chính câu chữ của họ.
         </p>
-        <span class="work-tag">Lịch sử · Triết học</span>
+        <span class="work-tag">Lịch sử · Suy tưởng</span>
       </div>
     </div>
   </section>
@@ -284,11 +283,13 @@
   <!-- LIÊN HỆ -->
   <section id="contact" class="section">
     <h2 class="section-title">Liên hệ</h2>
-    <p class="muted">Nếu bạn muốn góp ý, thảo luận về ý tưởng truyện, hoặc đơn giản là fangirl/fanboy chung một bộ nào đó.</p>
+    <p class="muted">Rất vui khi được kết nối và trao đổi cùng những ai có cùng niềm đam mê viết lách.</p>
     <div class="card contact-list">
-      <p>Email: <a href="mailto:bangcuuchuong99@gmail.com">bangcuuchuong99@gmail.com</a></p>
-      <p>Facebook: <a href="#" target="_blank">Trang hoặc profile của bạn</a></p>
-      <p>Nhắn riêng: Zalo / Telegram (sẽ cập nhật sau).</p>
+      <p>📧 Email: <a href="mailto:bangcuuchuong99@gmail.com">bangcuuchuong99@gmail.com</a></p>
+      <p>📱 SĐT: <a href="tel:0355357203">0355 357 203</a></p>
+      <p>🌐 Facebook: <a href="https://www.facebook.com/profile.php?id=61583911370933" target="_blank">
+        facebook.com/bangcuuchuong
+      </a></p>
     </div>
   </section>
 
