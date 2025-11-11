@@ -1,27 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <title>Bảng Cửu Chương</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fffaf0;
-      text-align: center;
-      margin-top: 100px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background-color: #fffaf0;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Thanh menu trên cùng */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: #fff7e6;
+      border-bottom: 1px solid #f0d9b5;
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      color: #ff5722;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-menu a {
+      margin-left: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    .nav-menu a:hover {
+      opacity: 1;
       color: #ff5722;
     }
-    p {
-      color: #333;
-      font-size: 18px;
+
+    /* Khối chung */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 16px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      color: #ff5722;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      max-width: 620px;
+      margin: 0 auto 20px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin: 4px 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background-color: #ffe0b2;
+      font-size: 12px;
+      color: #663300;
+    }
+
+    /* Giới thiệu */
+    .card {
+      background-color: #fffdf7;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-top: 16px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: #e64a19;
+    }
+
+    .muted {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    /* Tác phẩm / Bài viết */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .work-item {
+      background-color: #fffdf7;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .work-item h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #bf360c;
+    }
+
+    .work-item p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .work-tag {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background-color: #ffe0b2;
+      color: #6d3c17;
+    }
+
+    /* Liên hệ */
+    .contact-list p {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .contact-list a {
+      color: #ff5722;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px 16px 32px;
+      font-size: 13px;
+      background-color: #fff7e6;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 26px;
+      }
+      .nav-menu a {
+        margin-left: 10px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Chào mừng đến với trang của Bảng Cửu Chương!</h1>
-  <p>Bút danh chính thức – chia sẻ kiến thức, sáng tác và tư duy toán học.</p>
-  <p>© 2025 Bảng Cửu Chương. All rights reserved.</p>
+
+  <!-- MENU -->
+  <header>
+    <nav class="nav">
+      <div class="nav-brand">Bảng Cửu Chương</div>
+      <div class="nav-menu">
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#works">Tác phẩm</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="section hero">
+    <h1 class="hero-title">Chào mừng đến với trang của Bảng Cửu Chương!</h1>
+    <p class="hero-subtitle">
+      Bút danh chính thức – nơi tôi chia sẻ kiến thức, sáng tác và những ý tưởng xoay quanh toán học,
+      giáo dục và đời sống thường ngày.
+    </p>
+    <div>
+      <span class="hero-tag">Viết lách</span>
+      <span class="hero-tag">Giáo dục</span>
+      <span class="hero-tag">Toán học</span>
+    </div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section id="about" class="section">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p class="muted">Bảng Cửu Chương – cái tên gợi nhớ đến những bài học đầu đời về phép nhân.</p>
+    <div class="card">
+      <p>
+        Tôi sử dụng bút danh <strong>Bảng Cửu Chương</strong> cho các dự án viết lách, giảng dạy và
+        sáng tạo nội dung. Mục tiêu của tôi là biến những kiến thức tưởng như khô khan – như toán,
+        nghiên cứu, phương pháp học – thành những chia sẻ gần gũi, dễ hiểu và có ích cho người đọc.
+      </p>
+      <p style="margin-top:10px;">
+        Trong tương lai, trang này sẽ là nơi tập hợp:
+      </p>
+      <ul style="margin-left:18px; margin-top:6px; font-size:14px;">
+        <li>Bài viết ngắn về học tập, tư duy, và câu chuyện quanh “bảng cửu chương”.</li>
+        <li>Các tài liệu/slide dạy học do tôi tự thiết kế.</li>
+        <li>Những dự án cá nhân khác mà tôi muốn lưu dấu dưới bút danh này.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TÁC PHẨM / BÀI VIẾT -->
+  <section id="works" class="section">
+    <h2 class="section-title">Tác phẩm & Bài viết</h2>
+    <p class="muted">Một vài mục bạn có thể cập nhật dần – hiện giờ chỉ là ví dụ demo.</p>
+
+    <div class="grid">
+      <div class="work-item">
+        <h3>Bài viết: Học toán không cần sợ</h3>
+        <p>Một ghi chép nhỏ về cách tôi tiếp cận việc học toán theo hướng nhẹ nhàng, trực quan
+          và giàu ví dụ thực tế.</p>
+        <span class="work-tag">Bài viết</span>
+      </div>
+
+      <div class="work-item">
+        <h3>Series: Những câu chuyện từ bảng cửu chương</h3>
+        <p>Chuỗi mẩu chuyện ngắn dùng hình ảnh bảng cửu chương để nói về thói quen học tập,
+          kỷ luật và trí tưởng tượng.</p>
+        <span class="work-tag">Series</span>
+      </div>
+
+      <div class="work-item">
+        <h3>Tài liệu dạy học (đang cập nhật)</h3>
+        <p>Tập hợp slide, worksheet và ý tưởng hoạt động lớp học mà tôi chia sẻ miễn phí cho
+          giáo viên và phụ huynh.</p>
+        <span class="work-tag">Tài liệu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Liên hệ</h2>
+    <p class="muted">Nếu bạn muốn trao đổi về bài viết, ý tưởng hợp tác hoặc tài liệu dạy học.</p>
+    <div class="card contact-list">
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>Facebook: <a href="#" target="_blank">Facebook Bảng Cửu Chương</a></p>
+      <p>Zalo / Telegram: (bạn có thể thêm sau)</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Bảng Cửu Chương. All rights reserved.
+  </footer>
+
 </body>
 </html>
